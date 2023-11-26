@@ -31,7 +31,7 @@ public class AplikasiPenampilGambarComboBox extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         pilihan = new javax.swing.JComboBox<>();
-        imagePanel = new javax.swing.JPanel();
+        pCardLayout = new javax.swing.JPanel();
         glassfishLB = new javax.swing.JLabel();
         javaeeLB = new javax.swing.JLabel();
         postgresqlLB = new javax.swing.JLabel();
@@ -51,26 +51,26 @@ public class AplikasiPenampilGambarComboBox extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        imagePanel.setLayout(new java.awt.CardLayout());
+        pCardLayout.setLayout(new java.awt.CardLayout());
 
         glassfishLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Gllas.jpeg"))); // NOI18N
-        imagePanel.add(glassfishLB, "0");
+        pCardLayout.add(glassfishLB, "0");
 
         javaeeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/javaee.jpg"))); // NOI18N
-        imagePanel.add(javaeeLB, "1");
+        pCardLayout.add(javaeeLB, "1");
 
         postgresqlLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/postgre.jpg"))); // NOI18N
-        imagePanel.add(postgresqlLB, "2");
+        pCardLayout.add(postgresqlLB, "2");
 
-        getContentPane().add(imagePanel, java.awt.BorderLayout.CENTER);
+        getContentPane().add(pCardLayout, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void pilihanItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pilihanItemStateChanged
         // TODO add your handling code here:
-        CardLayout cl= (CardLayout) (pilihan.getLayout());
-        cl.show (pilihan, String.valueOf(pilihan.getSelectedIndex()));
+        CardLayout cl= (CardLayout) (pCardLayout.getLayout());
+        cl.show (pCardLayout, String.valueOf(pilihan.getSelectedIndex()));
     }//GEN-LAST:event_pilihanItemStateChanged
 
     /**
@@ -111,10 +111,10 @@ public class AplikasiPenampilGambarComboBox extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel glassfishLB;
-    private javax.swing.JPanel imagePanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel javaeeLB;
+    private javax.swing.JPanel pCardLayout;
     private javax.swing.JComboBox<String> pilihan;
     private javax.swing.JLabel postgresqlLB;
     // End of variables declaration//GEN-END:variables
